@@ -93,7 +93,6 @@ This will download:
 - **FAISS** (Similarity Search)
 - **HuggingFace Transformers**
 - **Streamlit**
-- **SciSpaCy** (NER)
 - **Pandas / NumPy / Scikit-learn**
 
 ---
