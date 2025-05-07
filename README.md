@@ -99,7 +99,6 @@ This will download:
 
 ## ✨ Future Improvements
 
-- Add support for multiple language queries
 - Use LLM APIs (e.g., Groq or OpenAI) for advanced answer generation
 - Improve chunk reranking with BGE or S-BioBERT embeddings
 - Add unit tests and Streamlit Cloud deployment
