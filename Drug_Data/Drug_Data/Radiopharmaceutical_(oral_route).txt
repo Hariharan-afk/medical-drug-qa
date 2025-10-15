@@ -1,0 +1,151 @@
+Brand Name:
+
+USBrand Name:
+Iodotope
+
+Omnipaque 12
+
+Omnipaque 9
+
+Oraltag
+
+Pytest
+
+
+Description:
+Radiopharmaceuticals are agents used to diagnose certain medical problems or treat certain diseases. They may be given to the patient in several different ways. For example, they may be given by mouth, given by injection, or placed into the eye or into the bladder.
+
+These radiopharmaceuticals are used in the diagnosis of:
+
+-> Abscess and infection—Gallium Citrate Ga 67, Indium In 111 Oxyquinoline
+-> Biliary tract blockage—Technetium Tc 99m Disofenin, Technetium Tc 99m Lidofenin, Technetium Tc 99m Mebrofenin
+-> Blood volume studies—Radioiodinated Albumin, Sodium Chromate Cr 51
+-> Blood vessel diseases—Sodium Pertechnetate Tc 99m
+-> Blood vessel diseases of the brain—Ammonia N 13, Iofetamine I 123, Technetium Tc 99m Bicisate, Technetium Tc 99m Exametazime, Xenon Xe 133
+-> Bone diseases—Sodium Fluoride F 18, Technetium Tc 99m Medronate, Technetium Tc 99m Oxidronate, Technetium Tc 99m Pyrophosphate, Technetium Tc 99m (Pyro- and trimeta-) Phosphates
+-> Bone marrow diseases—Sodium Chromate Cr 51, Technetium Tc 99m Albumin Colloid, Technetium Tc 99m Sulfur Colloid
+-> Brain diseases and tumors—Fludeoxyglucose F 18, Indium In 111 Pentetreotide, Iofetamine I 123, Sodium Pertechnetate Tc 99m, Technetium Tc 99m Exametazime, Technetium Tc 99m Gluceptate, Technetium Tc 99m Pentetate
+-> Cancer; tumors—Fludeoxyglucose F 18, Gallium Citrate Ga 67, Indium In 111 Pentetreotide, Methionine C 11, Radioiodinated Iobenguane, Sodium Fluoride F 18, Technetium Tc 99m Arcitumomab, Technetium Tc 99m Nofetumomab Merpentan
+-> Colorectal disease—Technetium Tc 99m Arcitumomab
+-> Disorders of iron metabolism and absorption—Ferrous Citrate Fe 59
+-> Heart disease—Ammonia N 13, Fludeoxyglucose F 18, Rubidium Rb 82, Sodium Pertechnetate Tc 99m, Technetium Tc 99m Albumin, Technetium Tc 99m Sestamibi, Technetium Tc 99m Teboroxime, Technetium Tc 99m Tetrofosmin, Thallous Chloride Tl 201
+-> Heart muscle damage (infarct)—Ammonia N 13, Fludeoxyglucose F 18, Rubidium Rb 82, Technetium Tc 99m Pyrophosphate, Technetium Tc 99m (Pyro- and trimeta-) Phosphates, Technetium Tc 99m Sestamibi, Technetium Tc 99m Teboroxime, Technetium Tc 99m Tetrofosmin, Thallous Chloride Tl 201
+-> Impaired flow of cerebrospinal fluid in brain—Indium In 111 Pentetate
+-> Kidney diseases—Iodohippurate Sodium I 123, Iodohippurate Sodium I 131, Iothalamate Sodium I 125, Technetium Tc 99m Gluceptate, Technetium Tc 99m Mertiatide, Technetium Tc 99m Pentetate, Technetium Tc 99m Succimer
+-> Liver diseases—Ammonia N 13, Fludeoxyglucose F 18, Technetium Tc 99m Albumin Colloid, Technetium Tc 99m Disofenin, Technetium Tc 99m Lidofenin, Technetium Tc 99m Mebrofenin, Technetium Tc 99m Sulfur Colloid
+-> Lung diseases—Krypton Kr 81m, Technetium Tc 99m Albumin Aggregated, Technetium Tc 99m Pentetate, Xenon Xe 127, Xenon Xe 133
+-> Parathyroid diseases; parathyroid cancer—Technetium Tc 99m Sestamibi, Thallous Chloride Tl 201
+-> Pernicious anemia; improper absorption of vitamin B12 from intestines—Cyanocobalamin Co 57
+-> Red blood cell diseases—Sodium Chromate Cr 51
+-> Salivary gland diseases—Sodium Pertechnetate Tc 99m
+-> Spleen diseases—Sodium Chromate Cr 51, Technetium Tc 99m Albumin Colloid, Technetium Tc 99m Sulfur Colloid
+-> Stomach and intestinal bleeding—Sodium Chromate Cr 51, Sodium Pertechnetate Tc 99m, Technetium Tc 99m (Pyro- and trimeta-) Phosphates, Technetium Tc 99m Sulfur Colloid
+-> Stomach problems—Technetium Tc 99m Sulfur Colloid
+-> Tear duct blockage—Sodium Pertechnetate Tc 99m
+-> Thyroid diseases; thyroid cancer—Fludeoxyglucose F 18, Indium In 111 Pentetreotide, Radioiodinated Iobenguane, Sodium Iodide I 123, Sodium Iodide I 131, Sodium Pertechnetate Tc 99m, Technetium Tc 99m Sestamibi
+-> Urinary bladder diseases—Sodium Pertechnetate Tc 99m
+Radiopharmaceuticals are radioactive agents. However, when small amounts are used, the radiation your body receives from them is very low and is considered safe. When larger amounts of these agents are given to treat disease, there may be different effects on the body.
+
+When radiopharmaceuticals are used to help diagnose medical problems, only small amounts are given to the patient. The radiopharmaceutical then passes through, or is taken up by, an organ of the body (which organ depends on what radiopharmaceutical is used and how it has been given). Then the radioactivity is detected, and pictures are produced, by special imaging equipment. These pictures allow the nuclear medicine doctor to study how the organ is working and to detect cancer or tumors that may be present in the organ.
+
+Some radiopharmaceuticals are used in larger amounts to treat certain kinds of cancer and other diseases. In those cases, the radioactive agent is taken up in the cancerous area and destroys the affected tissue.    The information that follows applies only to radiopharmaceuticals when used in small amounts to diagnose medical problems .
+
+The dosages of radiopharmaceuticals that are used to diagnose medical problems will be different for different patients and depend on the type of test. The amount of radioactivity of a radiopharmaceutical is expressed in units called becquerels or curies. Radiopharmaceutical dosages given may be as small as 0.185 megabecquerels (5 microcuries) or as high as 1295 megabecquerels (35 millicuries). The radiation received from these dosages may be about the same as, or even less than, the radiation received from an x-ray study of the same organ.
+
+Radiopharmaceuticals are to be given only by or under the direct supervision of a doctor with specialized training in nuclear medicine.
+
+OncoScint(R) CR/CV (satumomab pendetide) was discontinued in the United States on December 26, 2002.
+
+Marketing of NeutroSpec (technetium 99m TC fanolesomab) was discontinued by Palatin Technologies, their marketing partner, Mallinckrodt, and the FDA. The risk of severe and fatal allergic-type reactions outweigh its benefit.
+
+This product is available in the following dosage forms:
+
+-> Kit
+
+Before Using:
+In deciding to receive a diagnostic test, the risks of taking the test must be weighed against the good it will do. This is a decision you and your doctor will make. For these tests, the following should be considered:
+
+
+Allergies:
+Tell your doctor if you have ever had any unusual or allergic reaction to medicines in this group or any other medicines. Also tell your health care professional if you have any other types of allergies, such as to foods dyes, preservatives, or animals. For non-prescription products, read the label or package ingredients carefully.
+
+
+Pediatric:
+For most radiopharmaceuticals, the amount of radiation used for a diagnostic test is very low and considered safe. However, be sure you have discussed with your doctor the benefit versus the risk of exposing your child to radiation.
+
+
+Geriatric:
+Many medicines have not been studied specifically in older people. Therefore, it may not be known whether they work exactly the same way they do in younger adults or if they cause different side effects or problems in older people. Although there is no specific information comparing use of most radiopharmaceuticals in the elderly with use in other age groups, problems would not be expected to occur. However, it is a good idea to check with your doctor if you notice any unusual effects after receiving a radiopharmaceutical.
+
+
+Pregnancy:
+Radiopharmaceuticals usually are not recommended for use during pregnancy. This is to avoid exposing the fetus to radiation. Some radiopharmaceuticals may be used for diagnostic tests in pregnant women, but it is necessary to inform your doctor if you are pregnant so the doctor may reduce the radiation dose to the baby. This is especially important with radiopharmaceuticals that contain radioactive iodine, which can go to the baby's  thyroid gland and, in high enough amounts, may cause thyroid damage. Be sure you have discussed this with your doctor.
+
+
+Breastfeeding:
+Some radiopharmaceuticals pass into the breast milk and may expose the baby to radiation. If you must receive a radiopharmaceutical, it may be necessary for you to stop breast-feeding for some time after receiving it. Be sure you have discussed this with your doctor.
+
+
+Drug Interactions:
+Although certain medicines should not be used together at all, in other cases two different medicines may be used together even if an interaction might occur. In these cases, your doctor may want to change the dose, or other precautions may be necessary. Tell your healthcare professional if you are taking any other prescription or nonprescription (over-the-counter [OTC]) medicine.
+
+
+Other Interactions:
+Certain medicines should not be used at or around the time of eating food or eating certain types of food since interactions may occur.  Using alcohol or tobacco with certain medicines may also cause interactions to occur.  Discuss with your healthcare professional the use of your medicine with food, alcohol, or tobacco.
+
+
+Proper Use:
+The nuclear medicine doctor may have special instructions for you in preparation for your test. For example, before some tests you must fast for several hours, or the results of the test may be affected. For other tests you should drink plenty of liquids. If you do not understand the instructions you receive or if you have not received any instructions, check with the nuclear medicine doctor in advance.
+
+
+Precautions:
+There are usually no special precautions to observe for radiopharmaceuticals when they are used in small amounts for diagnosis.
+
+Some radiopharmaceuticals may accumulate in your bladder. Therefore, to increase the flow of urine and lessen the amount of radiation to your bladder, your doctor may instruct you to drink plenty of liquids and urinate often after certain tests.
+
+For patients receiving  radioactive iodine (iodohippurate sodium I 123, iodohippurate sodium I 131, iofetamine I 123, iothalamate I 125, radioiodinated albumin, or radioiodinated iobenguane) :
+
+-> Make sure your doctor knows if you are planning to have any future thyroid tests. Even after several weeks, the results of the thyroid test may be affected by the iodine solution that may be given before the radiopharmaceutical.
+
+Side Effects:
+Along with its needed effects, a medicine may cause some unwanted effects. When radiopharmaceuticals are used in very small doses to study an organ of the body, side effects are rare and usually involve an allergic reaction. These effects may occur almost immediately or a few minutes after the radiopharmaceutical is given. It may be helpful to note the time when you first notice any side effect. Your doctor, nuclear medicine physician and/or technologist, or nurse will be prepared to give you immediate medical attention if needed.
+
+Check with your doctor or nurse immediately  if any of the following side effects occur:
+
+
+Rare:
+-> Chills
+-> difficulty breathing
+-> drowsiness (severe)
+-> fainting
+-> fast heartbeat
+-> fever
+-> flushing or redness of skin
+-> headache (severe)
+-> nausea or vomiting
+-> skin rash, hives, or itching
+-> stomach pain
+-> swelling of throat, hands, or feet
+Other side effects not listed may also occur in some patients. If you notice any other effects, check with your healthcare professional.
+
+Call your doctor for medical advice about side effects. You may report side effects to the FDA at 1-800-FDA-1088.
+
+Drug information provided by:
+
+Portions of this document last updated:
+
+Copyright: © Merative US L.P. 1973, 2025. All rights reserved. Information is for End User's use only and may not be sold, redistributed or otherwise used for commercial purposes.
+
+-> The Mayo Clinic Diet
+-> Drugs & Supplements
+-> Radiopharmaceutical (oral route)
+CON-XXXXXXXX
+
+Mayo Clinic does not endorse companies or products. Advertising revenue supports our non-profit mission.
+
+
+Advertising & Sponsorship:
+-> Policy
+-> Opportunities
+-> Ad Choices
+Make a gift to honor and celebrate the contributions of our world-class doctors.

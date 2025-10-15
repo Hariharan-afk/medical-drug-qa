@@ -47,6 +47,7 @@ import os
 import json
 import numpy as np
 import re
+from functools import lru_cache
 from typing import List, Dict, Any, Optional
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -54,6 +55,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Regex to strip any '(… route)' suffix for drug name matching
 _DRUG_ROUTE_PATTERN = re.compile(r"\s*\([^)]*route\)", flags=re.IGNORECASE)
 
+@lru_cache(maxsize=4)
 def load_embeddings(embeddings_path: str) -> np.ndarray:
     """
     Load the saved embeddings numpy array.
@@ -61,6 +63,7 @@ def load_embeddings(embeddings_path: str) -> np.ndarray:
     return np.load(embeddings_path)
 
 
+@lru_cache(maxsize=4)
 def load_metadata(metadata_path: str) -> List[Dict[str, Any]]:
     """
     Load the metadata JSON which contains chunk_id, drug_name, section, subsection, and chunk_text.
@@ -123,6 +126,11 @@ def rerank_chunks(
     return top_idxs.tolist()
 
 
+@lru_cache(maxsize=2)
+def _get_reranker(model_name: str) -> SentenceTransformer:
+    return SentenceTransformer(model_name)
+
+
 def retrieve(
     query: str,
     drug_name: str,
@@ -149,7 +157,7 @@ def retrieve(
         print(f"No chunks found for drug='{drug_name}' and section='{section}'.")
         return []
 
-    reranker = SentenceTransformer(reranker_model_name)
+    reranker = _get_reranker(reranker_model_name)
     chunk_texts = [m['chunk_text'] for m in meta_filtered]
 
     top_local_idxs = rerank_chunks(query, chunk_texts, reranker, top_k)

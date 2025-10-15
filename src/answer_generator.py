@@ -55,6 +55,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from typing import List, Dict, Any
+from config import GROQ_MODEL as CONFIG_GROQ_MODEL
 
 # Load environment variables from .env
 load_dotenv()
@@ -64,7 +65,7 @@ GROQ_API_URL = os.getenv(
     "GROQ_API_URL",
     "https://api.groq.com/openai/v1/chat/completions"
 )
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama3-8b-8192")
+GROQ_MODEL = os.getenv("GROQ_MODEL", CONFIG_GROQ_MODEL)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # must be set in your environment
 
 
@@ -135,9 +136,37 @@ def generate_answer(
         "Content-Type": "application/json"
     }
 
+    # Optional debug: dump payload (with masked API key) when GROQ_DEBUG=1 in env
+    if os.getenv("GROQ_DEBUG") == "1":
+        masked_headers = headers.copy()
+        if GROQ_API_KEY:
+            masked_headers["Authorization"] = f"Bearer {'*' * 8 + GROQ_API_KEY[-4:]}"
+        print("--- GROQ Debug Payload ---")
+        print("URL:", GROQ_API_URL)
+        print("HEADERS:", masked_headers)
+        # Print truncated messages to avoid very long output
+        msgs = payload.get("messages", [])
+        short_msgs = []
+        for m in msgs:
+            content = m.get("content", "")
+            if len(content) > 500:
+                content = content[:500] + "...<truncated>"
+            short_msgs.append({"role": m.get("role"), "content": content})
+        print("PAYLOAD (truncated):", {**{k: v for k, v in payload.items() if k != 'messages'}, "messages": short_msgs})
+        print("--- end debug ---")
+
     # Send the request
     response = requests.post(GROQ_API_URL, headers=headers, json=payload)
-    response.raise_for_status()
+    # Provide a clearer error message on bad requests by including the response body
+    try:
+        response.raise_for_status()
+    except requests.HTTPError as e:
+        # Try to include structured JSON error if available, otherwise fall back to text
+        try:
+            err = response.json()
+        except Exception:
+            err = response.text
+        raise RuntimeError(f"Groq API request failed: {response.status_code} - {err}") from e
     data = response.json()
 
     # Extract the assistant's content

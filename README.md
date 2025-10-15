@@ -1,111 +1,104 @@
+# Medical Drug QA
 
-# 💊 Medical Drug QA System
-
-A retrieval-based question-answering system for medical drugs that combines intent classification, semantic chunk retrieval, and generative answer formulation. Designed to assist users in querying drug-related information efficiently using a structured and AI-powered pipeline.
-
----
-
-## 🧠 Project Overview
-
-This system enables users to ask natural language questions about medical drugs. The workflow includes:
-
-1. **Web Scraping**: Drug-related data was scraped from the Mayo Clinic and flattened into a CSV format.
-2. **Intent Classification**: The query is classified to identify:
-   - The drug being referred to
-   - The section of the drug (e.g., Description, Precautions, Dosage)
-3. **Retrieval & Similarity**: Using `MiniLM-v6`, the system searches the most relevant chunks based on semantic similarity.
-4. **Answer Generation**: The top 5 chunks are passed to a generative model to formulate a final, human-readable response.
+Retrieval-augmented question answering for medical drugs with a Streamlit UI. It classifies intent (drug + section), retrieves semantically relevant chunks, and generates a grounded answer using an LLM.
 
 ---
 
-## 📁 Folder Structure
+## Overview
+
+- Ingestion: Drug documentation is flattened into `data/flattened_drug_dataset_cleaned.csv` and chunked with metadata.
+- Embeddings: Sentence embeddings built with `all-MiniLM-L6-v2` and stored alongside a FAISS index in `embeddings/`.
+- Intent: `src/intent_classifier.py` extracts the drug (via dictionary lookup) and classifies a section via semantic similarity.
+- Retrieval: `src/retriever.py` filters by drug + section, then ranks relevant chunks.
+- Generation: `src/answer_generator.py` composes a grounded response (Groq API).
+
+---
+
+## Folder Structure
 
 ```
 medical-drug-qa/
-├── app/                    # Streamlit UI and chat utilities
-│   ├── chat_utils.py
-│   └── main.py
-├── src/                    # Core backend modules
-│   ├── answer_generator.py
-│   ├── chatbot.py
-│   ├── config.py
-│   ├── drug_dictionary.py
-│   ├── embedder.py
-│   ├── intent_classifier.py
-│   └── retriever.py
-├── download_assets.py      # Script to download large data/model files
-├── requirements.txt        # Python dependencies
+├─ app/                      # Streamlit UI
+│  ├─ main.py
+│  └─ chat_utils.py
+├─ src/                      # Core logic
+│  ├─ answer_generator.py
+│  ├─ chatbot.py             # Optional CLI
+│  ├─ config.py
+│  ├─ drug_dictionary.py
+│  ├─ embedder.py
+│  ├─ intent_classifier.py
+│  └─ retriever.py
+├─ embeddings/               # Downloaded at runtime (gitignored)
+├─ data/                     # Downloaded at runtime (gitignored)
+├─ app.py                    # HF Spaces entrypoint for Streamlit
+├─ download_assets.py        # Downloads CSV + embeddings
+├─ requirements.txt
+└─ .gitignore
 ```
 
 ---
 
-## 🔽 Download Required Data
+## Setup (Local)
 
-Due to GitHub's file size limits, key assets (embeddings and datasets) are hosted on Google Drive. Run the following command to automatically download them:
+1) Create environment and install deps
 
-```bash
+```
+python -m venv .venv
+.\.venv\Scripts\activate        # Windows
+pip install -r requirements.txt
+```
+
+2) Download dataset + embeddings
+
+```
 python download_assets.py
 ```
 
-This will download:
-- `embeddings/faiss_index.faiss`
-- `embeddings/drug_embeddings.npy`
-- `embeddings/drug_chunks_metadata.json`
-- `data/flattened_drug_dataset_cleaned.csv`
+3) Configure environment
+
+Create a `.env` file with:
+
+```
+GROQ_API_KEY=your_key
+# Optional
+GROQ_MODEL=openai/gpt-oss-120b
+```
+
+4) Run
+
+```
+streamlit run app/main.py
+```
 
 ---
 
-## ⚙️ Setup Instructions
+## Deploy: Hugging Face Spaces (Streamlit)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Hariharan-afk/medical-drug-qa.git
-   cd medical-drug-qa
-   ```
+1) Push this repo to GitHub (ensure `data/` and `embeddings/` are not committed; they are downloaded at runtime).
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   .\.venv\Scripts\activate       # On Windows
-   ```
+2) Create a Space
+- Go to huggingface.co/spaces → New Space
+- SDK: Streamlit
+- Hardware: CPU Basic
+- Connect your GitHub repo or upload files
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+3) App entrypoint
+- This repo includes `app.py` at the root which imports the Streamlit app, so Spaces will run it automatically.
 
-4. Download the embeddings and data:
-   ```bash
-   python download_assets.py
-   ```
+4) Set secrets/variables
+- In the Space: Settings → Variables and secrets
+  - `GROQ_API_KEY`: your API key
+  - Optional `GROQ_MODEL`
 
-5. Launch the Streamlit app:
-   ```bash
-   streamlit run app/main.py
-   ```
+5) First build/run
+- The app installs requirements and then pulls assets via `download_assets.py` if missing.
 
 ---
 
-## 🛠️ Technologies Used
+## Notes
 
-- **Python**
-- **MiniLM-v6** (Sentence Transformers)
-- **FAISS** (Similarity Search)
-- **HuggingFace Transformers**
-- **Streamlit**
-- **Pandas / NumPy / Scikit-learn**
+- If you want to rebuild embeddings: run `src/embedder.py` to refresh `embeddings/` from the CSV.
+- `src/retriever.py` and `src/intent_classifier.py` use MiniLM embeddings for speed; you can swap in a biomedical reranker for higher accuracy.
+- Large artifacts are gitignored; the app auto-downloads them on first run.
 
----
-
-## ✨ Future Improvements
-
-- Use LLM APIs (e.g., Groq or OpenAI) for advanced answer generation
-- Improve chunk reranking with BGE or S-BioBERT embeddings
-- Add unit tests and Streamlit Cloud deployment
-
----
-
-## 📬 Contact
-
-Project developed by Hariharan Chandrasekar.  
-If you'd like to collaborate or explore this further, feel free to connect!

@@ -1,6 +1,3 @@
-# src/chatbot.py
-
-# src/chatbot.py
 import sys
 
 from intent_classifier import classify_intent
@@ -9,7 +6,7 @@ from answer_generator import generate_answer
 
 
 def chat_loop():
-    print("🩺 Medical QA Chatbot (type 'exit' or 'quit' to stop)")
+    print("Medical QA Chatbot (type 'exit' or 'quit' to stop)")
     while True:
         try:
             query = input("\nYou: ").strip()
@@ -21,29 +18,29 @@ def chat_loop():
             print("Goodbye!")
             break
 
-        # 1️⃣ Intent classification
+        # 1) Intent classification
         intent = classify_intent(query)
         drug = intent.get("drug_name")
         section = intent.get("section")
 
         if not drug:
-            print("🤖 Sorry, I don’t have information on that drug.")
+            print("Sorry, I don’t have information on that drug.")
             continue
 
-        # 2️⃣ Retrieve top chunks
+        # 2) Retrieve top chunks
         chunks = retrieve(query, drug, section)
         if not chunks:
-            print(f"🤖 Sorry, I don’t have any '{section}' info for {drug}.")
+            print(f"Sorry, I don’t have any '{section}' info for {drug}.")
             continue
 
-        # 3️⃣ Generate final answer
+        # 3) Generate final answer
         try:
             answer = generate_answer(query, chunks)
         except Exception as e:
-            print(f"⚠️ Error generating answer: {e}")
+            print(f"Error generating answer: {e}")
             continue
 
-        print(f"\n🤖 {answer}")
+        print(f"\n{answer}")
 
 
 if __name__ == '__main__':

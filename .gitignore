@@ -1,0 +1,53 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.ENV
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Test / cache
+.pytest_cache/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/
+
+# Large or generated data artifacts
+data/
+embeddings/
+!data/.gitkeep
+!embeddings/.gitkeep
+
+# Model / downloads (optional common folders)
+models/
+downloads/
+
+# Node (if any frontend assets are added later)
+node_modules/
